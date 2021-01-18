@@ -186,47 +186,48 @@
   </head>
 
   <body>
-    <div id="elementsWrapper" class="not-visible">
-      <div class="colorPalette">
-        <div
-          class="colorIcon body-color"
-          style="background-color: black;"
-          data-color="black"
-        ></div>
-        <div
-          class="colorIcon body-color"
-          style="background-color: white;"
-          data-color="white"
-        ></div>
-        <div
-          class="colorIcon body-color"
-          style="background-color: #33363d;"
-          data-color="#33363D"
-        ></div>
-        <div
-          class="colorIcon body-color"
-          style="background-color: #aaaaaa;"
-          data-color="#AAAAAA"
-        ></div>
-        <div
-          class="colorIcon body-color"
-          style="background-color: #182f59;"
-          data-color="#182F59"
-        ></div>
-        <div
-          class="colorIcon body-color"
-          style="background-color: #bb2516;"
-          data-color="#BB2516"
-        ></div>
-      </div>
-      <div class="infoWindow">
-        <img
-          src="assets/info2.png"
-          style="width: 45px; pointer-events: auto; cursor: pointer;"
-          onclick="toggle(event);"
-          alt=""
-        />
-      </div>
+    //<div id="elementsWrapper" class="not-visible">
+    //  <div class="colorPalette">
+    //    <div
+    //      class="colorIcon body-color"
+    //      style="background-color: black;"
+    //      data-color="black"
+    //    ></div>
+    //    <div
+    //      class="colorIcon body-color"
+    //      style="background-color: white;"
+    //      data-color="white"
+    //    ></div>
+    //    <div
+    //     class="colorIcon body-color"
+    //      style="background-color: #33363d;"
+    //      data-color="#33363D"
+    //    ></div>
+    //    <div
+    //      class="colorIcon body-color"
+    //      style="background-color: #aaaaaa;"
+    //      data-color="#AAAAAA"
+    //    ></div>
+    //   <div
+    //      class="colorIcon body-color"
+    //     style="background-color: #182f59;"
+    //      data-color="#182F59"
+    //    ></div>
+    //    <div
+    //      class="colorIcon body-color"
+    //      style="background-color: #bb2516;"
+    //      data-color="#BB2516"
+    //    ></div>
+    //  </div>
+    //  <div class="infoWindow">
+    //    <img
+    //      src="assets/info2.png"
+    //      style="width: 45px; pointer-events: auto; cursor: pointer;"
+    //      onclick="toggle(event);"
+    //     alt=""
+    //    />
+    //  </div>
+
       <div id="infoWrapper">
         <h3>Rochstr.5</h3>
         <p>
@@ -236,30 +237,32 @@
           >
         </p>
       </div>
-      <div id="info">
-        <div class="engineWindow">
-          <img
-            src="assets/Engine_Start_Button_icon_white.png"
-            style="width: 45px; pointer-events: auto; cursor: pointer;"
-            onclick="toggleEngine(event);"
-            alt=""
-          />
-        </div>
-      </div>
+
+      // <div id="info">
+      //  <div class="engineWindow">
+      //    <img
+      //      src="assets/Engine_Start_Button_icon_white.png"
+      //      style="width: 45px; pointer-events: auto; cursor: pointer;"
+      //      onclick="toggleEngine(event);"
+      //      alt=""
+      //    />
+      //  </div>
+      // </div>
 
       <div id="logo">
         <img src="assets/b2real.cropped.png" style="width: 100px;" alt="" />
       </div>
     </div>
-    <audio id="audio">
-      <source src="assets/audi_enginestart.mp3" type="audio/mpeg" />
-    </audio>
-    <video
-      id="video"
-      autoplay
-      webkit-playsinline="true"
-      playsinline="true"
-    ></video>
+
+    //<audio id="audio">
+    //  <source src="assets/audi_enginestart.mp3" type="audio/mpeg" />
+    //</audio>
+    //<video
+    //  id="video"
+    //  autoplay
+    //  webkit-playsinline="true"
+    //  playsinline="true"
+    //></video>
     <div id="loaderIndicator">
       <div class="lds-spinner">
         <div></div>
@@ -302,7 +305,7 @@
         renderer.setClearAlpha(0.0);
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setAnimationLoop(render);
+        //renderer.setAnimationLoop(render);
 
         renderer.outputEncoding = THREE.sRGBEncoding;
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -357,14 +360,14 @@
         // light.shadow.camera.near = 0.5;       // default
         // light.shadow.camera.far = 500      // default
 
-        var bodyMaterial = new THREE.MeshPhysicalMaterial({
-          color: 0xffffff,
-          side: THREE.DoubleSide,
-          metalness: 0.6,
-          roughness: 0.4,
-          clearcoat: 0.05,
-          clearcoatRoughness: 0.05,
-        });
+        //var bodyMaterial = new THREE.MeshPhysicalMaterial({
+        //  color: 0xffffff,
+        //  side: THREE.DoubleSide,
+        //  metalness: 0.6,
+        //  roughness: 0.4,
+        //  clearcoat: 0.05,
+        //  clearcoatRoughness: 0.05,
+        // });
 
         // var glassMaterial = new THREE.MeshPhysicalMaterial({
         //   color: 0xffffff,
@@ -378,18 +381,18 @@
         //   metalness: 1.0,
         //   roughness: 0.5
         // });
-        var bodyColorSelection = document.getElementsByClassName("body-color");
-        for (var i = 0; i < bodyColorSelection.length; i++) {
-          bodyColorSelection[i].addEventListener(
-            "click",
-            function (event) {
-              event.preventDefault();
-              var attribute = this.getAttribute("data-color");
-              bodyMaterial.color.set(attribute);
-            },
-            false
-          );
-        }
+        // var bodyColorSelection = document.getElementsByClassName("body-color");
+        // for (var i = 0; i < bodyColorSelection.length; i++) {
+        //   bodyColorSelection[i].addEventListener(
+        //    "click",
+        //    function (event) {
+        //      event.preventDefault();
+        //      var attribute = this.getAttribute("data-color");
+        //      bodyMaterial.color.set(attribute);
+        //    },
+        //    false
+        //  );
+        //}
         // var glassColorInput = document.getElementById("glass-color");
         // glassColorInput.addEventListener("input", function () {
         //   glassMaterial.color.set(this.value);
@@ -398,6 +401,7 @@
         // detailsColorInput.addEventListener("input", function() {
         //   detailsMaterial.color.set(this.value);
         // });
+        
         var manager = new THREE.LoadingManager();
         manager.onLoad = function () {
           // document.getElementById("loaderIndicator").style.display = "none";
@@ -432,7 +436,8 @@
         var threeGLTFLoader = new GLTFLoader(manager);
         threeGLTFLoader.load("assets/rochstr5.glb", function (
           gltf
-        ) {
+        ) 
+        {
           //var carModel = gltf.scene;
           // carModel.traverse(o => {
           //   console.log(o.name);
@@ -446,13 +451,14 @@
           //wheels.push(
             //carModel.getObjectByName("007_back_tyres"),
             //carModel.getObjectByName("006_front_tyres")
-          );
+          //);
+
           directionalLight.target = carModel;
           scene.add(carModel);
         });
       }
 
-      //function render() {
+      function render() {
       //  var time = performance.now() / 500;
       //  if (engineRunning) {
       //    for (var i = 0; i < wheels.length; i++) {
@@ -470,30 +476,30 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
       }
     </script>
-    <script>
-      var infoVisible,
-        engineRunning = false;
+    // <script>
+    //  var infoVisible,
+    //   engineRunning = false;
 
-      function toggle(e) {
-        e.preventDefault();
-        if (infoVisible) {
-          document.getElementById("infoWrapper").style.display = "none";
-          infoVisible = false;
-        } else {
-          document.getElementById("infoWrapper").style.display = "inline-block";
-          infoVisible = true;
-        }
-      }
-      function toggleEngine(e) {
+    //  function toggle(e) {
+    //    e.preventDefault();
+    //    if (infoVisible) {
+    //      document.getElementById("infoWrapper").style.display = "none";
+    //      infoVisible = false;
+    //    } else {
+    //     document.getElementById("infoWrapper").style.display = "inline-block";
+    //      infoVisible = true;
+    //    }
+    //  }
+    //  function toggleEngine(e) {
         // e.preventDefault();
-        if (engineRunning) {
-          document.getElementById("audio").pause();
-          engineRunning = false;
-        } else {
-          document.getElementById("audio").play();
-          engineRunning = true;
-        }
-      }
-    </script>
+    //    if (engineRunning) {
+    //      document.getElementById("audio").pause();
+    //      engineRunning = false;
+    //   } else {
+    //      document.getElementById("audio").play();
+    //      engineRunning = true;
+    //    }
+    //  }
+    //</script>
   </body>
 </html>

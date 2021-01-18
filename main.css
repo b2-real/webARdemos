@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  overscroll-behavior: none;
+  letter-spacing: 2px;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+canvas {
+  display: block;
+}
+
+a,
+button,
+input,
+select {
+  pointer-events: auto;
+}

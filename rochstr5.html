@@ -14,13 +14,18 @@
     </head>
     
     <body>
-        <model-viewer src="assets/rochstr5.glb"
-        ar ar-modes="webxr scene-viewer quick-look" 
-        ar-scale="auto" 
-        ar ar-placement="floor"
-        camera-controls alt="Rochstr.5" 
-        skybox-image="assets/free-download-hdri-maps.jpg" 
-        ios-src="assets/rochstr5.03usdz"></model-viewer>    
+              
+        <model-viewer src="rochstr5.glb" 
+        camera-controls exposure="1.09" 
+        shadow-intensity="0.5" 
+        camera-orbit="174.8deg 79.72deg 3356m" 
+        poster="rochstr5.png" 
+        min-camera-orbit="auto auto auto" 
+        max-camera-orbit="auto auto 3356m" 
+        camera-target="5.389m 500m -43.06m">
+
+        </model-viewer>
+        
     
 <!-- button slot="ar-button" id="ar-button">
  View in your space

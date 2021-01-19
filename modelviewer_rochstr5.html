@@ -1,10 +1,35 @@
 <!DOCTYPE html>
     <html>
     <meta charset="UTF-8" />
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
     <head>
+        <script src="./libs/three.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="main.css" />  
+        <style>
+        .colorIcon {
+        display: inline-block;
+        padding: 5px;
+        margin-bottom: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+      }    
+        .infoWindow {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+          } 
+        #logo {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }  
+        </style>  
+     
+
     <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 </script>
@@ -14,6 +39,27 @@
     </head>
     
     <body>
+        <div id="logo">
+            <img src="assets/b2real.cropped.png" style="width: 100px;" alt="" />
+          </div> 
+
+        <div class="infoWindow">
+            <img
+              src="assets/info2.png"
+              style="width: 45px; pointer-events: auto; cursor: pointer;"
+              onclick="toggle(event);"
+              alt=""
+            />
+          </div>
+          <div id="infoWrapper">
+            <h3>Accordestates</h3>
+            <p>
+              Für weitere Informationen besuchen Sie unsere
+              <a href="https://accordestates.com/" target="_blank"
+                >Website</a
+              >
+            </p>
+          </div>  
     <model-viewer src="assets\rochstr5.glb"
     ios-src="assets\rochstr5.usdc"
     poster="assets\rochstr5.png"        
